@@ -136,7 +136,36 @@
                 grid-auto-rows: auto;
             }
         }
+         /* Bento Ki Section */
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
 
+        .skill-badge:hover {
+            background: rgba(0, 163, 255, 0.1);
+            border-color: var(--dbz-blue);
+            transform: scale(1.05);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 10px rgba(0, 163, 255, 0.3));
+            transition: 0.3s;
+        }
+
+        .skill-badge:hover .skill-icon {
+            transform: rotate(10deg);
+            filter: drop-shadow(0 0 15px var(--dbz-blue));
+        }
         .text-glow {
             text-shadow: 0 0 10px var(--dbz-blue);
         }
@@ -477,108 +506,88 @@
         </div>
     </div>
 
-    <!-- SKILLS (NIVEAU DE KI) -->
-    <section id="competences" class="py-24 bg-gradient-to-b from-transparent to-blue-900/10 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="dbz-font text-3xl md:text-5xl font-black italic mb-16 uppercase">Mon <span class="text-blue-500">Niveau de Ki</span></h2>
+    <!-- SECTION NIVEAU DE KI (LOGOS OFFICIELS) -->
+    <section id="competences" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="dbz-font text-3xl md:text-5xl font-black italic uppercase">Mon <span class="text-blue-500">Niveau de Ki</span></h2>
+                <p class="text-gray-400 mt-4 uppercase tracking-widest text-xs">Logiciels & Technologies maîtrisés</p>
+            </div>
             
-            <div class="grid md:grid-cols-2 gap-12 text-left">
-                <!-- Skill 1 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">Python</span>
-                        <span class="text-blue-400 dbz-font">85%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 85%;"></div></div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                
+                <!-- DaVinci Resolve (Source Wikimedia - Official) -->
+                <div class="skill-badge">
+                    <img src="images2/DaVinci_Resolve_Studio.png" alt="DaVinci Resolve" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2"> DaVinci Resolve</span>
                 </div>
-                <!-- Skill 2 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">HTML</span>
-                        <span class="text-blue-400 dbz-font">85%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 92%;"></div></div>
+
+                <!-- CapCut (Source VectorLogoZone - High Quality) -->
+                <div class="skill-badge">
+                    <img src="images2/CapCut-Logo.png" alt="CapCut" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">CapCut</span>
                 </div>
-                <!-- Skill 3 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">SQL</span>
-                        <span class="text-blue-400 dbz-font">80%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 78%;"></div></div>
+
+                <!-- Canva (Official Brand Mark) -->
+                <div class="skill-badge">
+                    <img src="images2/Canva-Logo-Design-Platform-Icon.png" alt="Canva" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">Canva</span>
                 </div>
-                <!-- Skill 4 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">PHP</span>
-                        <span class="text-blue-400 dbz-font">75%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 80%;"></div></div>
+
+                <!-- Gemini (Google Official Sparkle) -->
+                <div class="skill-badge">
+                    <img src="images2/gemini-color-light (Personnalisé).png" alt="Gemini" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">Gemini</span>
                 </div>
-                <!-- Skill 5 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">CSS</span>
-                        <span class="text-blue-400 dbz-font">85%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 80%;"></div></div>
+
+                <!-- ChatGPT (OpenAI Official Logo) -->
+                <div class="skill-badge">
+                    <img src="images2/LOGO OPENIA.png" alt="ChatGPT" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">ChatGPT</span>
                 </div>
-                <!-- Skill 6 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">Canva</span>
-                        <span class="text-blue-400 dbz-font">80%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 80%;"></div></div>
+
+                <!-- Photoshop (Official Badge) -->
+                <div class="skill-badge">
+                    <img src="images2/500px-Adobe_Photoshop_CC_icon.png" alt="Photoshop" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">Photoshop</span>
                 </div>
-                <!-- Skill 7 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">Photoshop</span>
-                        <span class="text-blue-400 dbz-font">80%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 80%;"></div></div>
+
+                <!-- Illustrator (Official Badge) -->
+                <div class="skill-badge">
+                    <img src="images2/500px-Adobe_Illustrator_CC_icon.png" alt="Illustrator" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">Illustrator</span>
                 </div>
-                <!-- Skill 8 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">Illustrator</span>
-                        <span class="text-blue-400 dbz-font">70%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 80%;"></div></div>
+
+                <!-- Python -->
+                <div class="skill-badge">
+                    <img src="images2/icons8-python-240.png" alt="Python" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">Python</span>
                 </div>
-                <!-- Skill 9 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">DaVinci Resolve</span>
-                        <span class="text-blue-400 dbz-font">75%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 80%;"></div></div>
+
+                <!-- HTML5 -->
+                <div class="skill-badge">
+                    <img src="images2/500px-HTML5_logo_and_wordmark.png" alt="HTML5" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">HTML5</span>
                 </div>
-                 <!-- Skill 10 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">CapCut</span>
-                        <span class="text-blue-400 dbz-font">75%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 80%;"></div></div>
+
+                <!-- CSS3 -->
+                <div class="skill-badge">
+                    <img src="images2/500px-CSS3_logo_and_wordmark.png" alt="CSS3" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">CSS3</span>
                 </div>
-                 <!-- Skill 11 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">ChatGPT</span>
-                        <span class="text-blue-400 dbz-font">70%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 80%;"></div></div>
+
+                <!-- JavaScript -->
+                <div class="skill-badge">
+                    <img src="images2/500px-Unofficial_JavaScript_logo_2.png" alt="JavaScript" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">JS</span>
                 </div>
-                 <!-- Skill 12 -->
-                <div>
-                    <div class="flex justify-between items-end mb-2">
-                        <span class="font-bold uppercase tracking-widest text-sm">Gemini</span>
-                        <span class="text-blue-400 dbz-font">70%</span>
-                    </div>
-                    <div class="power-bar h-2"><div class="power-fill" style="width: 80%;"></div></div>
+
+                <!-- PHP -->
+                <div class="skill-badge">
+                    <img src="images2/500px-PHP-logo.png" alt="PHP" class="skill-logo">
+                    <span class="text-[10px] font-bold uppercase tracking-widest mt-2">PHP</span>
                 </div>
+
             </div>
         </div>
     </section>

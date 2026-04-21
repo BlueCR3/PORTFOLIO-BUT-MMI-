@@ -31,8 +31,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 450px;
-            height: 450px;
+            width: 250px;
+            height: 250px;
             z-index: -1;
             pointer-events: none;
         }
@@ -43,14 +43,14 @@
             background: radial-gradient(circle, #fff 0%, var(--dbz-blue) 35%, transparent 75%);
             border-radius: 50%;
             filter: blur(20px);
-            box-shadow: 0 0 120px var(--dbz-blue), inset 0 0 60px #fff;
+            box-shadow: 0 0 60px var(--dbz-blue), inset 0 0 30px #fff;
             animation: pulseGenki 5s infinite ease-in-out;
             opacity: 0.4;
         }
 
         @keyframes pulseGenki {
-            0%, 100% { transform: scale(1); opacity: 0.3; filter: blur(20px); }
-            50% { transform: scale(1.15); opacity: 0.6; filter: blur(35px); }
+            0%, 100% { transform: scale(1); opacity: 0.1; filter: blur(20px); }
+            50% { transform: scale(1.05); opacity: 0.6; filter: blur(35px); }
         }
 
         /* Particules d'énergie convergentes vers le centre */
